@@ -1,0 +1,35 @@
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+   int input = 0;
+   int counter = 0;
+   cout << "Enter number (To stop enter -1): "; // enter integer value from user
+   cin >> input;
+      while (input != -1)  // loop executes until input is equal to -1
+   {
+      
+       double m = (input * input); // number multiplied by itself
+       cout << "The number multiplied by itself : " << m << endl;
+      
+       double n = (input / input);  // number entered divided by itself
+       cout << "The number entered divided by itself : " << n << endl ;
+       
+       double o = (input + 3)/5 ;
+       cout << o << endl ;
+       
+       double p = ((input + 3)/5) + ((input + 7)/2) ;
+       cout << p << endl ;
+       
+       cout << "\nEnter number (To stop enter -1): ";
+       cin >> input ;
+       
+       counter += 1 ;  // count number of inputs
+       
+   }
+   cout << "\nTotal number of inputs entered: " << counter;  // displays total inputs entered
+}
+
+// If "0" is input when devided it will say "1" If a char or double var is input it will continually repeat itself.
