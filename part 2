@@ -1,0 +1,56 @@
+#include <iostream>
+using namespace std;
+
+/*
+There are three conditions we have to keep in mind while generating ordinals
+1, 2, 3 are treated differently i.e numbers ending with 1, 2, 3 are treated differently they end 'st', 'nd', 'rd' respectively
+
+11,22,33 ... the teens are treated differently, so numbers ending with 11,22, 44,55, 66 will have 'th'
+
+remaining all the numbers will have 'th' in the end.
+
+
+To apply the above conditions we bring the numbers within 0 to 100 range i.e mod 100 we perform
+
+
+
+*/
+
+
+int main () {
+
+    char *ordinals[] = {"st","nd","rd","th"};   
+								
+	int n;
+   cout << "Enter a number:";
+	cin>>n;
+	
+	for(int i=1;i<=n;i++)
+	{
+		int number = i%100; //bringing it in the range of 100
+		
+		if(number>3 && number<21)
+		 cout<<i<<ordinals[3]<<" Hello "<<endl;
+		 
+		else
+		{
+			if(number%10 ==1)
+			cout<<i<<ordinals[0]<<" Hello "<<endl;
+			
+			else if(number%10 ==2)
+			cout<<i<<ordinals[1]<<" Hello "<<endl;
+			
+			else if(number%10 ==3)
+			cout<<i<<ordinals[2]<<" Hello "<<endl;
+			
+			else
+			cout<<i<<ordinals[3]<<" Hello "<<endl;
+			
+			
+			
+		}
+		
+		
+	}			
+				        
+}
